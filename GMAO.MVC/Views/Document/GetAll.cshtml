@@ -1,0 +1,177 @@
+﻿@model IEnumerable<GMAO.App.Entities.Document_DTO>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN EXAMPLE TABLE PORTLET-->
+        <div class="portlet box blue">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="fa fa-edit"></i>Liste Documents
+                </div>
+                <div class="tools">
+                    <a href="javascript:;" class="collapse">
+                    </a>
+                    <a href="#portlet-config" data-toggle="modal" class="config">
+                    </a>
+                    <a href="javascript:;" class="reload">
+                    </a>
+                    <a href="javascript:;" class="remove">
+                    </a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div class="table-toolbar">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="btn-group">
+                                <button id="sample_editable_1_new" class="btn green">
+                                    Add New <i class="fa fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="btn-group pull-right">
+                                <button class="btn dropdown-toggle" data-toggle="dropdown">
+                                    Tools <i class="fa fa-angle-down"></i>
+                                </button>
+                                <ul class="dropdown-menu pull-right">
+                                    <li>
+                                        <a href="javascript:;">
+                                            Print
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            Save as PDF
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            Export to Excel
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <table class="table table-striped table-hover table-bordered" id="sample_editable_1">
+                    <thead>
+                        <tr>
+                            <th>
+                                Code
+                            </th>
+
+                            <th>
+                                Designation <input type="text" id="search-name" placeholder="Rechercher Nom">
+                            </th>
+                            <th>
+                                Date
+                            </th>
+                            <th>
+                                Edition
+                            </th>
+
+                            <th>
+                                Lien
+                            </th>
+
+
+                            <th>
+                                Modifier
+                            </th>
+                            <th>
+                                Supprimer
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+
+
+
+                        @foreach (var item in Model)
+                        {
+
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.codeDocument)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.libelle)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Date_creation)
+                                </td>
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Edition)
+
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.lien)
+                                </td>
+
+
+
+                                <td class="success">
+                                    @Html.ActionLink("update", "Update", "Document", new { id = item.Id })
+                                </td>
+                                <td class="danger">
+                                    <a href="/Document/Delete/@item.Id" data-id="@item.Id" class="btn-delete">Delete</a>
+                                    @*@Html.ActionLink("Delete", "Delete", "Document", new { id = item.Id }, new { @class = "btn-delete",@data-id=@item.Id})*@
+                                </td>
+                            </tr>
+
+
+
+                        }
+                    </tbody>
+                </table>
+
+
+
+
+            </div>
+        </div>
+        <!-- END EXAMPLE TABLE PORTLET-->
+    </div>
+</div>
+
+@section scripts{
+    <script type="text/javascript">
+                //recherch par nom
+                $(document).ready(function () {
+                    var table = $('#sample_editable_1').DataTable();
+
+
+                    $('#search-name').on('keyup', function () {
+
+                        table
+                        .column(1)
+                        .search(this.value)
+                        .draw();
+
+                    });
+
+                });
+
+    </script>
+
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,16 @@
+C:\Users\maho\Documents\Visual Studio 2013\Projects\DDDGMAO\GMAO.Infra\bin\Release\GMAO.Infra.dll.config
+C:\Users\maho\Documents\Visual Studio 2013\Projects\DDDGMAO\GMAO.Infra\bin\Release\GMAO.Infra.dll
+C:\Users\maho\Documents\Visual Studio 2013\Projects\DDDGMAO\GMAO.Infra\bin\Release\GMAO.Infra.pdb
+C:\Users\maho\Documents\Visual Studio 2013\Projects\DDDGMAO\GMAO.Infra\bin\Release\EntityFramework.dll
+C:\Users\maho\Documents\Visual Studio 2013\Projects\DDDGMAO\GMAO.Infra\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\maho\Documents\Visual Studio 2013\Projects\DDDGMAO\GMAO.Infra\bin\Release\GMAO.Domain.dll
+C:\Users\maho\Documents\Visual Studio 2013\Projects\DDDGMAO\GMAO.Infra\bin\Release\MySql.Data.dll
+C:\Users\maho\Documents\Visual Studio 2013\Projects\DDDGMAO\GMAO.Infra\bin\Release\mysql.data.entity.EF6.dll
+C:\Users\maho\Documents\Visual Studio 2013\Projects\DDDGMAO\GMAO.Infra\bin\Release\GMAO.Domain.pdb
+C:\Users\maho\Documents\Visual Studio 2013\Projects\DDDGMAO\GMAO.Infra\bin\Release\EntityFramework.xml
+C:\Users\maho\Documents\Visual Studio 2013\Projects\DDDGMAO\GMAO.Infra\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\maho\Documents\Visual Studio 2013\Projects\DDDGMAO\GMAO.Infra\obj\Release\GMAO.Infra.csprojResolveAssemblyReference.cache
+C:\Users\maho\Documents\Visual Studio 2013\Projects\DDDGMAO\GMAO.Infra\obj\Release\GMAO.Infra.dll
+C:\Users\maho\Documents\Visual Studio 2013\Projects\DDDGMAO\GMAO.Infra\obj\Release\GMAO.Infra.pdb
+C:\Users\maho\Documents\Visual Studio 2013\Projects\DDDGMAO\GMAO.Infra\obj\Release\GMAO.Infra.Migrations.init.resources
+C:\Users\maho\Documents\Visual Studio 2013\Projects\DDDGMAO\GMAO.Infra\obj\Release\GMAO.Infra.csproj.GenerateResource.Cache

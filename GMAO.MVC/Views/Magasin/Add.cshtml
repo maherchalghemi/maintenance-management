@@ -1,0 +1,219 @@
+﻿@model GMAO.App.Entities.Magasin_DTO
+
+
+
+@using (Html.BeginForm("Add", "Magasin", FormMethod.Post, new { id = "frmCreateMag" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div class="row">
+        <div class="col-xs-6">
+            <div class="form-group">
+                <label class="col-md-3 control-label">Code Magasin</label>
+                <div class="col-xs-6">
+                    <div class="input-icon">
+                        <i class="fa fa-star"></i>
+                        @Html.EditorFor(model => model.Code_magasin, new { htmlAttributes = new { @class = "form-control " } })
+                        @Html.ValidationMessageFor(model => model.Code_magasin, "", new { @class = "text-danger" })
+
+
+                        <label id="lblmsg" class="help-block text-danger" />
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <hr>
+            <!--/////////////////////-->
+    <div class="portlet-body form">
+
+
+        <div class="form-body">
+            <h3 class="form-section">Parametres</h3>
+
+            <!--/row-->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <div class="col-md-3">
+                            <label class="control-label">Libellé</label>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="input-icon">
+                                <i class="fa fa-star"></i>
+                                @Html.EditorFor(model => model.libelle, new { htmlAttributes = new { @class = "form-control " } })
+                                @Html.ValidationMessageFor(model => model.libelle, "", new { @class = "text-danger" })
+
+
+                                <label id="lblmsg1" class="help-block text-danger" />
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <br /><br /><br />
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <div class="col-md-3">
+                                <label class="control-label">Adresse</label>
+                            </div>
+                            <div class="col-md-9">
+
+
+                                @Html.EditorFor(model => model.Adresse, new { htmlAttributes = new { @class = "form-control " } })
+                                @Html.ValidationMessageFor(model => model.Adresse, "", new { @class = "text-danger" })
+
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <br /><br /><br />
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <div class="col-md-3">
+                                <label class="control-label">Tel</label>
+                            </div>
+                            <div class="col-md-9">
+                                @Html.EditorFor(model => model.tel, new { htmlAttributes = new { @class = "form-control " } })
+                                @Html.ValidationMessageFor(model => model.tel, "", new { @class = "text-danger" })
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <br /><br /><br />
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <div class="col-md-3">
+                                <label class="control-label">Observation</label>
+                            </div>
+                            <div class="col-md-9">
+                                @Html.EditorFor(model => model.obsrvation, new { htmlAttributes = new { @class = "form-control " } })
+                                @Html.ValidationMessageFor(model => model.obsrvation, "", new { @class = "text-danger" })
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <br /><br />
+
+                <!--/span-->
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="form-actions left">
+        <button type="button" class="btn default">Annuler</button>
+        <input type="button" value="Ajouter" class="btn blue" id="createButton" />
+
+
+    </div>
+
+
+
+        <!--/////////////////-->
+}
+
+
+
+
+@section scripts{
+    <script language="JavaScript" type="text/javascript">
+                //alert('Input can not be left blank');
+
+                $(document).ready(function () {
+                    $("#createButton").click(function (event) {
+
+                        // alert('Input can not be left blank');
+
+                        var form = $("#frmCreateMag");
+
+                        event.preventDefault();
+
+
+                        $.ajax(
+                               {
+
+
+                                   url: '@Url.Action("Add","Magasin")',
+                                   data: form.serialize(),
+                                   type: 'POST',
+
+
+                                   success: function (result) {
+                                       if (result == true) {
+                                           // alert('Input can not be left blank');
+                                           //alert(result);
+                                           //window.location.reload();
+                                           $('#lblmsg').html("");
+                                           $('#lblmsg1').html("");
+
+                                           document.getElementById("Code_magasin").style.borderColor = "#00FF80";
+                                           document.getElementById("libelle").style.borderColor = "#00FF80";
+
+                                           toastr.success('Fournisseur ajouté', 'hhhhhhh');
+
+
+                                       }
+
+                                       else if (result == false) {
+
+                                           if (document.getElementById("Code_magasin").value == "") {
+                                               $('#lblmsg').html("Four vide");
+                                               document.getElementById("Code_magasin").focus();
+                                               document.getElementById("Code_magasin").style.borderColor = "red";
+                                           }
+
+                                           if (document.getElementById("libelle").value == "") {
+                                               $('#lblmsg1').html("Four vide");
+                                               document.getElementById("libelle").focus();
+                                               document.getElementById("libelle").style.borderColor = "red";
+                                           }
+
+
+                                           toastr.error('ERREUR');
+                                       }
+
+
+
+                                   },
+                                   error: function (result) {
+
+                                   }
+                               });
+                    });
+                });
+    </script>
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

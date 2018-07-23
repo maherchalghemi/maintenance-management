@@ -1,0 +1,217 @@
+﻿<!-- Modal  -->
+<div class="modal fade" id="modalAddUpdate" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Ajouter/Modifier</h4>
+            </div>
+
+            <div class="modal-body">
+                <form role="form">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="txtMatricule">Matricule</label>
+                                <div class="col-xs-6">
+                                    <div class="input-icon">
+                                        <i class="fa fa-star"></i>
+
+                                        <input type="text" class="form-control" id="txtMatricule">
+                                        <input type="hidden" id="hidID" value="0" />
+
+                                        <label id="lblmsg" class="help-block text-danger" />
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <!--/////////////////////-->
+
+                    <div class="col-md-12">
+
+
+                        <h3 class="form-section">Parametres</h3>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="txtNom">Nom</label>
+
+                                    <input type="text" class="form-control" id="txtNom">
+
+                                    <label id="lblmsg1" class="help-block text-danger" />
+                                </div>
+                            </div>
+                            <!--/span-->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="txtPrenom">Prénom</label>
+
+                                    <input type="text" class="form-control" id="txtPrenom">
+
+                                    <label id="lblmsg2" class="help-block text-danger" />
+                                </div>
+                            </div>
+                            <!--/span-->
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="txtDateNaissance">Date de Naissance</label>
+                                    <input type="date" class="form-control" id="txtDateNaissance">
+                                </div>
+                            </div>
+                            <!--/span-->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="txtCIN">CIN</label>
+                                    <input type="text" class="form-control" id="txtCIN">
+                                </div>
+                            </div>
+                            <!--/span-->
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="txtDateAjout">Date de Recrutement</label>
+                                    <input type="text" class="form-control" id="txtDateAjout">
+                                </div>
+                            </div>
+                            <!--/span-->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Civilite</label>
+                                    <select class="form-control">
+                                        <option value=""></option>
+                                        <option value="Mr">Mr</option>
+                                        <option value="Mme">Mme</option>
+                                        <option value="Melle">Melle</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!--/span-->
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-12 ">
+                                <div class="form-group">
+                                    <label for="txtAdresse">Adresse</label>
+                                    <input type="text" class="form-control" id="txtAdresse">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!--/row-->
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <label for="txtville">Ville</label>
+                                    <input type="text" class="form-control" id="txtville">
+                                </div>
+                            </div>
+                            <!--/span-->
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Code postal</label>
+                                    <select class="form-control" id="txtcode_postal"></select>
+                                </div>
+                            </div>
+                            <!--/span-->
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="txtTel">Tel</label>
+                                    <input type="text" class="form-control" id="txtTel">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="txtGSM">GSM</label>
+                                    <input type="text" class="form-control" id="txtGSM">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="txtEmail">Email</label>
+                                    <input type="email" class="form-control" id="txtEmail">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <div class="form-group">
+
+
+                                <label class="col-md-3 control-label">Département</label>
+
+                                <div class="col-md-6">
+
+                                    <select class="form-control" id="selDep">
+                                        <option> --</option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <br /><br />
+                        <!--/span-->
+                        <div class="row">
+                            <div class="col-md-12 ">
+                                <div class="form-group">
+                                    <label for="txtGrade">Fonction</label>
+                                    <textarea class="form-control" rows="3" id="txtGrade"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 ">
+                                <div class="form-group">
+                                    <label>Qualification</label>
+                                    <textarea class="form-control" rows="3"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 ">
+                                <div class="form-group">
+                                    <label>Observation</label>
+                                    <textarea class="form-control" rows="3"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </form>
+            </div>
+
+
+
+
+
+
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" id="btnSave">Save</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

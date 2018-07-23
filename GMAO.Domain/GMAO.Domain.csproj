@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{71A188FC-F798-41F7-8CB8-814398CE674D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GMAO.Domain</RootNamespace>
+    <AssemblyName>GMAO.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Entities\Article.cs" />
+    <Compile Include="Entities\Atelier.cs" />
+    <Compile Include="Entities\cArr_Equip.cs" />
+    <Compile Include="Entities\CategorieClient.cs" />
+    <Compile Include="Entities\CategorieEquipement.cs" />
+    <Compile Include="Entities\CategorieFournisseur.cs" />
+    <Compile Include="Entities\CategorieOutillage.cs" />
+    <Compile Include="Entities\CategoriePieceRechange.cs" />
+    <Compile Include="Entities\Category.cs" />
+    <Compile Include="Entities\Catt_Equip.cs" />
+    <Compile Include="Entities\Client.cs" />
+    <Compile Include="Entities\Company.cs" />
+    <Compile Include="Entities\Composant.cs" />
+    <Compile Include="Entities\Compteur.cs" />
+    <Compile Include="Entities\Consigne_maintenance.cs" />
+    <Compile Include="Entities\ConsMaintEquipement.cs" />
+    <Compile Include="Entities\ConsPieceRechange.cs" />
+    <Compile Include="Entities\Dec_Panne.cs" />
+    <Compile Include="Entities\Departement.cs" />
+    <Compile Include="Entities\Devise.cs" />
+    <Compile Include="Entities\Document.cs" />
+    <Compile Include="Entities\Emplacement.cs" />
+    <Compile Include="Entities\Equipement.cs" />
+    <Compile Include="Entities\Fonctionality.cs" />
+    <Compile Include="Entities\Fournisseur.cs" />
+    <Compile Include="Entities\GroupUser.cs" />
+    <Compile Include="Entities\ListeconsMaintEquipement.cs" />
+    <Compile Include="Entities\Magasin.cs" />
+    <Compile Include="Entities\Module.cs" />
+    <Compile Include="Entities\Ordre_de_travail.cs" />
+    <Compile Include="Entities\OTEmploye.cs" />
+    <Compile Include="Entities\OTfournisseurs.cs" />
+    <Compile Include="Entities\OTOutillage.cs" />
+    <Compile Include="Entities\OTPieceRechange.cs" />
+    <Compile Include="Entities\Outillage.cs" />
+    <Compile Include="Entities\Personnel.cs" />
+    <Compile Include="Entities\PhotoPanne.cs" />
+    <Compile Include="Entities\PieceRechange.cs" />
+    <Compile Include="Entities\Poste_de_charge.cs" />
+    <Compile Include="Entities\Rangement.cs" />
+    <Compile Include="Entities\Right.cs" />
+    <Compile Include="Entities\Site.cs" />
+    <Compile Include="Entities\StockIn.cs" />
+    <Compile Include="Entities\StockOut.cs" />
+    <Compile Include="Entities\TestScheduler.cs" />
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="Interfaces\Repository\IArticleRepository.cs" />
+    <Compile Include="Interfaces\Repository\IAtelierRepository.cs" />
+    <Compile Include="Interfaces\Repository\ICarr_EquipRepository.cs" />
+    <Compile Include="Interfaces\Repository\ICategorieClientRepository.cs" />
+    <Compile Include="Interfaces\Repository\ICategorieEquipementRepository.cs" />
+    <Compile Include="Interfaces\Repository\ICategorieFournisseurRepository.cs" />
+    <Compile Include="Interfaces\Repository\ICategorieOutillageRepository.cs" />
+    <Compile Include="Interfaces\Repository\ICategoriePieceRechangeRepository.cs" />
+    <Compile Include="Interfaces\Repository\ICategoryRepository.cs" />
+    <Compile Include="Interfaces\Repository\ICatt_EquipRepository.cs" />
+    <Compile Include="Interfaces\Repository\IClientRepository.cs" />
+    <Compile Include="Interfaces\Repository\ICompanyRepository.cs" />
+    <Compile Include="Interfaces\Repository\IComposantRepository.cs" />
+    <Compile Include="Interfaces\Repository\ICompteurRepository.cs" />
+    <Compile Include="Interfaces\Repository\IConsigne_maintenanceRepository.cs" />
+    <Compile Include="Interfaces\Repository\IConsMaintEquipementRepository.cs" />
+    <Compile Include="Interfaces\Repository\IConsPieceRechangeRepository.cs" />
+    <Compile Include="Interfaces\Repository\IDec_PanneRepository.cs" />
+    <Compile Include="Interfaces\Repository\IDepartementRepository.cs" />
+    <Compile Include="Interfaces\Repository\IDeviseRepository.cs" />
+    <Compile Include="Interfaces\Repository\IDocumentRepository.cs" />
+    <Compile Include="Interfaces\Repository\IEmplacementRepository.cs" />
+    <Compile Include="Interfaces\Repository\IEquipementRepository.cs" />
+    <Compile Include="Interfaces\Repository\IFonctionalityRepository.cs" />
+    <Compile Include="Interfaces\Repository\IFournisseurRepository.cs" />
+    <Compile Include="Interfaces\Repository\IGroupUserRepository.cs" />
+    <Compile Include="Interfaces\Repository\IListeconsMaintEquipementRepository.cs" />
+    <Compile Include="Interfaces\Repository\IMagasinRepository.cs" />
+    <Compile Include="Interfaces\Repository\IModuleRepository.cs" />
+    <Compile Include="Interfaces\Repository\IOrdre_de_travailRepository.cs" />
+    <Compile Include="Interfaces\Repository\IOTEmployeRepository.cs" />
+    <Compile Include="Interfaces\Repository\IOTfournisseursRepository.cs" />
+    <Compile Include="Interfaces\Repository\IOTOutillageRepository.cs" />
+    <Compile Include="Interfaces\Repository\IOTPieceRechangeRepository.cs" />
+    <Compile Include="Interfaces\Repository\IOutillageRepository.cs" />
+    <Compile Include="Interfaces\Repository\IPersonnelRepository.cs" />
+    <Compile Include="Interfaces\Repository\IPhotoPanneRepository.cs" />
+    <Compile Include="Interfaces\Repository\IPieceRechangeRepository.cs" />
+    <Compile Include="Interfaces\Repository\IPoste_de_chargeRepository.cs" />
+    <Compile Include="Interfaces\Repository\IRangementRepository.cs" />
+    <Compile Include="Interfaces\Repository\IRepositoryBase.cs" />
+    <Compile Include="Interfaces\Repository\IRightRepository.cs" />
+    <Compile Include="Interfaces\Repository\ISiteRepository.cs" />
+    <Compile Include="Interfaces\Repository\IStockInRepository.cs" />
+    <Compile Include="Interfaces\Repository\IStockOutRepository.cs" />
+    <Compile Include="Interfaces\Repository\ITestSchedulerRepository.cs" />
+    <Compile Include="Interfaces\Repository\IUserRepository.cs" />
+    <Compile Include="Interfaces\Service\IArticleService.cs" />
+    <Compile Include="Interfaces\Service\IAtelierService.cs" />
+    <Compile Include="Interfaces\Service\ICarr_EquipService.cs" />
+    <Compile Include="Interfaces\Service\ICategorieClientService.cs" />
+    <Compile Include="Interfaces\Service\ICategorieEquipementService.cs" />
+    <Compile Include="Interfaces\Service\ICategorieFournisseurService.cs" />
+    <Compile Include="Interfaces\Service\ICategorieOutillageService.cs" />
+    <Compile Include="Interfaces\Service\ICategoriePieceRechangeService.cs" />
+    <Compile Include="Interfaces\Service\ICategoryService.cs" />
+    <Compile Include="Interfaces\Service\ICatt_EquipService.cs" />
+    <Compile Include="Interfaces\Service\IClientService.cs" />
+    <Compile Include="Interfaces\Service\ICompanyService.cs" />
+    <Compile Include="Interfaces\Service\IComposantService.cs" />
+    <Compile Include="Interfaces\Service\ICompteurService.cs" />
+    <Compile Include="Interfaces\Service\IConsigne_maintenanceService.cs" />
+    <Compile Include="Interfaces\Service\IConsMaintEquipementService.cs" />
+    <Compile Include="Interfaces\Service\IConsPieceRechangeService.cs" />
+    <Compile Include="Interfaces\Service\IDec_PanneService.cs" />
+    <Compile Include="Interfaces\Service\IDepartementService.cs" />
+    <Compile Include="Interfaces\Service\IDeviseService.cs" />
+    <Compile Include="Interfaces\Service\IDocumentService.cs" />
+    <Compile Include="Interfaces\Service\IEmplacementService.cs" />
+    <Compile Include="Interfaces\Service\IEquipementService.cs" />
+    <Compile Include="Interfaces\Service\IFonctionalityService.cs" />
+    <Compile Include="Interfaces\Service\IFournisseurService.cs" />
+    <Compile Include="Interfaces\Service\IGroupUserService.cs" />
+    <Compile Include="Interfaces\Service\IListeconsMaintEquipementService.cs" />
+    <Compile Include="Interfaces\Service\IMagasinService.cs" />
+    <Compile Include="Interfaces\Service\IModuleService.cs" />
+    <Compile Include="Interfaces\Service\IOrdre_de_travailService.cs" />
+    <Compile Include="Interfaces\Service\IOTEmployeService.cs" />
+    <Compile Include="Interfaces\Service\IOTfournisseursService.cs" />
+    <Compile Include="Interfaces\Service\IOTOutillageService.cs" />
+    <Compile Include="Interfaces\Service\IOTPieceRechangeService.cs" />
+    <Compile Include="Interfaces\Service\IOutillageService.cs" />
+    <Compile Include="Interfaces\Service\IPersonnelService.cs" />
+    <Compile Include="Interfaces\Service\IPhotoPanneService.cs" />
+    <Compile Include="Interfaces\Service\IPieceRechangeService.cs" />
+    <Compile Include="Interfaces\Service\IPoste_de_chargeService.cs" />
+    <Compile Include="Interfaces\Service\IRangementService.cs" />
+    <Compile Include="Interfaces\Service\IRightService.cs" />
+    <Compile Include="Interfaces\Service\IServiceBase.cs" />
+    <Compile Include="Interfaces\Service\ISiteService.cs" />
+    <Compile Include="Interfaces\Service\IStockInService.cs" />
+    <Compile Include="Interfaces\Service\IStockOutService.cs" />
+    <Compile Include="Interfaces\Service\ITestSchedulerService.cs" />
+    <Compile Include="Interfaces\Service\IUserService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\ArticleService.cs" />
+    <Compile Include="Service\AtelierService.cs" />
+    <Compile Include="Service\Carr_EquipService.cs" />
+    <Compile Include="Service\CategorieClientService.cs" />
+    <Compile Include="Service\CategorieEquipementService.cs" />
+    <Compile Include="Service\CategorieFournisseurService.cs" />
+    <Compile Include="Service\CategorieOutillageService.cs" />
+    <Compile Include="Service\CategoriePieceRechangeService.cs" />
+    <Compile Include="Service\CategoryService.cs" />
+    <Compile Include="Service\Catt_EquipService.cs" />
+    <Compile Include="Service\ClientService.cs" />
+    <Compile Include="Service\CompanyService.cs" />
+    <Compile Include="Service\ComposantService.cs" />
+    <Compile Include="Service\CompteurService.cs" />
+    <Compile Include="Service\Consigne_maintenanceService.cs" />
+    <Compile Include="Service\ConsMaintEquipementService.cs" />
+    <Compile Include="Service\ConsPieceRechangeService.cs" />
+    <Compile Include="Service\Dec_PanneService.cs" />
+    <Compile Include="Service\DepartementService.cs" />
+    <Compile Include="Service\DeviseService.cs" />
+    <Compile Include="Service\DocumentService.cs" />
+    <Compile Include="Service\EmplacementService.cs" />
+    <Compile Include="Service\EquipementService.cs" />
+    <Compile Include="Service\FonctionalityService.cs" />
+    <Compile Include="Service\FournisseurService.cs" />
+    <Compile Include="Service\GroupUserService.cs" />
+    <Compile Include="Service\ListeconsMaintEquipementService.cs" />
+    <Compile Include="Service\MagasinService.cs" />
+    <Compile Include="Service\ModuleService.cs" />
+    <Compile Include="Service\Ordre_de_travailService.cs" />
+    <Compile Include="Service\OTEmployeService.cs" />
+    <Compile Include="Service\OTfournisseursService.cs" />
+    <Compile Include="Service\OTOutillageService.cs" />
+    <Compile Include="Service\OTPieceRechangeService.cs" />
+    <Compile Include="Service\OutillageService.cs" />
+    <Compile Include="Service\PersonnelService.cs" />
+    <Compile Include="Service\PhotoPanneService.cs" />
+    <Compile Include="Service\PieceRechangeService.cs" />
+    <Compile Include="Service\Poste_de_chargeService.cs" />
+    <Compile Include="Service\RangementService.cs" />
+    <Compile Include="Service\RepositoryBase.cs" />
+    <Compile Include="Service\RightService.cs" />
+    <Compile Include="Service\ServiceBase.cs" />
+    <Compile Include="Service\SiteService.cs" />
+    <Compile Include="Service\StockInService.cs" />
+    <Compile Include="Service\StockOutService.cs" />
+    <Compile Include="Service\TestSchedulerService.cs" />
+    <Compile Include="Service\UserService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

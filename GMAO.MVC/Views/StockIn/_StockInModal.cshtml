@@ -1,0 +1,273 @@
+﻿<!-- Modal  -->
+<div class="modal fade in" id="modalAddUpdate" role="dialog">
+    <div class="modal-dialog modal-full">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h2 class="modal-title"><font color="#819FF7">Fiche Planification OT Préventive</font></h2><!--Entrée Stock-->
+            </div>
+
+            <div class="modal-body">
+                <form role="form">
+
+
+
+                    <hr>
+                    <!--/////////////////////-->
+                    <div class="portlet-body form">
+
+
+                        <div class="form-body">
+                            <h3 class="form-section">Entrée</h3>
+
+                            <!--/row-->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <div class="col-md-3">
+                                            <label class="control-label" for="txtDate">Date de Mouvement</label>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <div class="input-icon">
+                                                <i class="fa fa-star"></i>
+
+                                                <input type="date" class="form-control" id="txtDate">
+
+                                                <label id="lblmsg" class="help-block text-danger" />
+                                                <input type="hidden" id="hidID" value="0" />
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <br /><br /><br />
+
+
+                                <div class="row">
+
+
+
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <div class="col-md-3">
+                                                <label class="control-label">Entrer Par</label>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <select class="form-control" id="selPers">
+                                                    <option> --</option>
+
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="row">
+
+
+
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <div class="col-md-3">
+                                                <label class="control-label">Magasin</label>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <select class="form-control" id="selMag">
+                                                    <option> --</option>
+
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="row">
+
+
+
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <div class="col-md-3">
+                                                <label class="control-label">Référence (EXT)</label>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <input type="text" class="form-control" id="txtDesignation">
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+
+                                <br /><br />
+
+                                <!--/span-->
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="portlet box green" id="my_portlet">
+                        <div class="portlet-title">
+                            <div class="caption">
+                                <i class="fa fa-edit"></i>Planification <!--/Pièce de Rechange-->
+                            </div>
+                            <div class="tools">
+                                <a href="javascript:;" class="collapse">
+                                </a>
+
+                            </div>
+                        </div>
+                        <div class="portlet-body form">
+
+
+                            <div class="row">
+
+
+                                <br /><br /><br />
+                                <div class="row">
+                                    <div class="col-md-12">
+
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <br /><br />
+                                                <div class="col-md-3">
+                                                    <label class="control-label">Priorité</label> <!--/Pièce init-->
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <select class="form-control" id="selPiece">
+                                                        <option> --Priorité--</option>
+
+                                                    </select>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <br /><br />
+
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <br /><br />
+                                                <div class="col-md-3">
+                                                    <label class="control-label">Type</label> <!--/Emplacement init-->
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <select class="form-control" id="selEmp">
+                                                        <option> --Type--</option>
+
+                                                    </select>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <br /><br />
+
+                                       <!-- <div class="col-md-12">
+                                            <div class="form-group">
+                                                <br /><br />
+                                                <div class="col-md-3">
+                                                    <label class="control-label">Fournisseur</label>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <select class="form-control" id="selFour">
+                                                        <option> --</option>
+
+                                                    </select>
+
+                                                </div>
+                                            </div>
+                                        </div>--> <!--/Supprimer commentaire-->
+
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <div class="col-md-3">
+                                                    <label class="control-label">Du :</label> <!--/Qte Mouvement init-->
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="input-icon">
+                                                        <i class="fa fa-star"></i>
+
+                                                        <input type="date" class="form-control" id="txtqte"> <!--/text init-->
+
+                                                        <label id="lblmsg1" class="help-block text-danger" />
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="col-md-3">
+                                                    <label class="control-label">Au :</label><!--/Prix Unitaire init-->
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="input-icon">
+                                                        <i class="fa fa-star"></i>
+
+                                                        <input type="Date" class="form-control" id="txtprix"> <!--/text init-->
+
+                                                        <label id="lblmsg1" class="help-block text-danger" />
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12 ">
+                                            <div class="form-group">
+                                               <!-- <label for="txtObservation">Equipement</label> <!--/Observation init-->
+                                               <!-- <textarea class="form-control" rows="3" id="txtobservation"></textarea>   supprimer commentaire-->
+                                                <div class="col-md-3">
+                                                    <label class="control-label">Equipement</label>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <select class="form-control" id="selFour">
+                                                        <option> --Choisir Equipement--</option>
+
+                                                    </select> <!--/Supprimer SElect-->
+                                                </div>
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+
+
+
+                        </div>
+
+                    </div>
+
+                </form>
+            </div>
+
+
+
+
+
+
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" id="btnSave">Valider</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

@@ -1,0 +1,14 @@
+c:\users\maho\documents\visual studio 2013\Projects\DDDGMAO\GMAO.Infra\obj\Debug\GMAO.Infra.csprojResolveAssemblyReference.cache
+c:\users\maho\documents\visual studio 2013\Projects\DDDGMAO\GMAO.Infra\bin\Debug\GMAO.Infra.dll.config
+c:\users\maho\documents\visual studio 2013\Projects\DDDGMAO\GMAO.Infra\bin\Debug\GMAO.Infra.dll
+c:\users\maho\documents\visual studio 2013\Projects\DDDGMAO\GMAO.Infra\bin\Debug\GMAO.Infra.pdb
+c:\users\maho\documents\visual studio 2013\Projects\DDDGMAO\GMAO.Infra\bin\Debug\EntityFramework.dll
+c:\users\maho\documents\visual studio 2013\Projects\DDDGMAO\GMAO.Infra\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\maho\documents\visual studio 2013\Projects\DDDGMAO\GMAO.Infra\bin\Debug\GMAO.Domain.dll
+c:\users\maho\documents\visual studio 2013\Projects\DDDGMAO\GMAO.Infra\bin\Debug\MySql.Data.dll
+c:\users\maho\documents\visual studio 2013\Projects\DDDGMAO\GMAO.Infra\bin\Debug\mysql.data.entity.EF6.dll
+c:\users\maho\documents\visual studio 2013\Projects\DDDGMAO\GMAO.Infra\bin\Debug\GMAO.Domain.pdb
+c:\users\maho\documents\visual studio 2013\Projects\DDDGMAO\GMAO.Infra\bin\Debug\EntityFramework.xml
+c:\users\maho\documents\visual studio 2013\Projects\DDDGMAO\GMAO.Infra\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\maho\documents\visual studio 2013\Projects\DDDGMAO\GMAO.Infra\obj\Debug\GMAO.Infra.dll
+c:\users\maho\documents\visual studio 2013\Projects\DDDGMAO\GMAO.Infra\obj\Debug\GMAO.Infra.pdb

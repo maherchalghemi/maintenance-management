@@ -1,0 +1,166 @@
+﻿@model GMAO.App.Entities.Compteur_DTO
+
+
+
+@using (Html.BeginForm("Add", "Compteur", FormMethod.Post, new { id = "frmCreateCompteur" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+    <div class="portlet-body form">
+
+
+        <div class="form-body">
+            <h3 class="form-section">Parametres</h3>
+
+            <!--/row-->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <div class="col-md-3">
+                            <label class="control-label">Code Compteur</label>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="input-icon">
+                                <i class="fa fa-star"></i>
+                                @Html.EditorFor(model => model.codeCompt, new { htmlAttributes = new { @class = "form-control " } })
+                                @Html.ValidationMessageFor(model => model.codeCompt, "", new { @class = "text-danger" })
+
+
+                                <label id="lblmsg" class="help-block text-danger" />
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <br /><br /><br />
+                <div class="col-md-12">
+
+                    <div class="form-group">
+                        <div class="col-md-3">
+                            <label class="control-label">Unite</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control">
+                        </div>
+
+                    </div>
+                </div>
+                <br /><br /><br />
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <div class="col-md-3">
+                            <label class="control-label">Valeur Max</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <br /><br />
+
+
+            <!--/span-->
+        </div>
+    </div>
+
+
+
+
+    <div class="form-actions left">
+        <button type="button" class="btn default">Annuler</button>
+        <input type="button" value="Ajouter" class="btn blue" id="createButton" />
+
+
+    </div>
+
+
+
+        <!--/////////////////-->
+
+
+}
+
+
+
+
+@section scripts{
+    <script language="JavaScript" type="text/javascript">
+    //alert('Input can not be left blank');
+
+    $(document).ready(function () {
+        $("#createButton").click(function (event) {
+
+           // alert('Input can not be left blank');
+
+            var form = $("#frmCreateCompteur");
+
+            event.preventDefault();
+
+
+             $.ajax(
+                    {
+
+
+             url: '@Url.Action("Add","Compteur")',
+            data: form.serialize(),
+            type: 'POST',
+
+
+             success: function (result) {
+                  if (result == true) {
+                      // alert('Input can not be left blank');
+                      //alert(result);
+                      //window.location.reload();
+                      $('#lblmsg').html("");
+
+
+                      document.getElementById("codeCompt").style.borderColor = "#00FF80";
+
+                      toastr.success('Fournisseur ajouté', 'hhhhhhh');
+
+
+                  }
+
+                  else if (result == false) {
+
+                      if (document.getElementById("codeCompt").value == "") {
+                     $('#lblmsg').html("Four vide");
+                     document.getElementById("codeCompt").focus();
+                     document.getElementById("codeCompt").style.borderColor = "red";
+                      }
+
+
+
+
+            toastr.error('ERREUR');
+                  }
+
+
+
+              },
+             error: function (result) {
+
+              }
+          });
+        });
+    });
+    </script>
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

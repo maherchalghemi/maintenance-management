@@ -1,0 +1,88 @@
+﻿
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="col-md-11">
+            <div class="col-md-4">
+                <input type="text" class="form-control" id="txtNameS" placeholder="Type name" />
+            </div>
+            <div class="col-md-4">
+                <select class="form-control" id="ddlStatusS">
+                    <option value="">All</option>
+                    <option value="true">Active</option>
+                    <option value="false">Locked</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-primary" id="btnSearch">Search</button>
+                <button class="btn btn-default" id="btnReset">Reset</button>
+            </div>
+        </div>
+        <div class="col-md-1">
+            <button id="btnAddNew" class="btn btn-success pull-right">Ajouter  <i class="fa fa-plus"></i></button>        </div>
+    </div>
+</div>
+<br /><br /><br />
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-condensed">
+            <thead>
+                <tr>
+                    <td>Code Pièce</td>
+                    <td>Désignation</td>
+                    <td>Description</td>
+                    <td>Catégorie</td>
+                    <td>Etat</td>
+                    <td>Code à Barre Interne</td>
+                    <td>Code à Barre Du Fabricant</td>
+                    <td>Prix HT</td>
+                    <td>Qte en Stock</td>
+                    <td>Stock de Sécurité</td>
+                    <td>Unité</td>
+                    <td>Code fournisseur</td>
+                    <td>#</td>
+                </tr>
+            </thead>
+            <tbody id="tblData"></tbody>
+        </table>
+        <div id="pagination" class="pagination">
+        </div>
+        <script id="data-template" type="x-tmpl-mustache">
+            <tr>
+                <td>{{CodePiece}}</td>
+                <td>{{Designation}}</td>
+                <td>{{Description}}</td>
+                <td>{{{CodeCatgorie}}}</td>
+                <td>{{Etat_Pice}}</td>
+                <td>{{CodeBarre}}</td>
+                <td>{{CodeBarreFab}}</td>
+                <td>{{PrixHT}}</td>
+                <td>{{QteReappro}}</td>
+                <td>{{stock_scurit}}</td>
+                <td>{{unité}}</td>
+                <td>{{code_Fournisseur}}</td>
+                <td>
+                    <button onclick="fncEdit(this)" id="btn-edit" class="btn btn-primary" data-id="{{Id}}">Edit</button>
+                    <button onclick="fncDelelte(this)" id="btn-delete" class="btn btn-danger" data-id="{{Id}}">Delete</button>
+                </td>
+            </tr>
+        </script>
+    </div>
+</div>
+
+@RenderPage("_PieceRechangeModal.cshtml")
+
+
+
+
+
+
+
+@section scripts{
+    <script src="~/assets/global/plugins/bootbox/bootbox.min.js"></script>
+    <script src="~/Scripts/controllers/PieceRechangeController.js"></script>
+    <script src="~/Scripts/plugins/jquery.twbsPagination.min.js"></script>
+    <script src="~/Scripts/plugins/mustache.min.js"></script>
+
+}

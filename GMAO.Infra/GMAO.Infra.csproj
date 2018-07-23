@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DA672856-1721-4AF4-AE54-C78C4E808295}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GMAO.Infra</RootNamespace>
+    <AssemblyName>GMAO.Infra</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\MySql.Data.6.9.8\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="mysql.data.entity.EF6, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MySql.Data.Entities.6.8.3.0\lib\net45\mysql.data.entity.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Context\GmaoContext.cs" />
+    <Compile Include="EntityConfig\ArticleMap.cs" />
+    <Compile Include="EntityConfig\AtelierMap.cs" />
+    <Compile Include="EntityConfig\Carr_EquipMap.cs" />
+    <Compile Include="EntityConfig\CategorieClientMap.cs" />
+    <Compile Include="EntityConfig\CategorieEquipementMap.cs" />
+    <Compile Include="EntityConfig\CategorieFournisseurMap.cs" />
+    <Compile Include="EntityConfig\CategorieOutillageMap.cs" />
+    <Compile Include="EntityConfig\CategoriePieceRechangeMap.cs" />
+    <Compile Include="EntityConfig\CategoryMap.cs" />
+    <Compile Include="EntityConfig\Catt_EquipMap.cs" />
+    <Compile Include="EntityConfig\ClientMap.cs" />
+    <Compile Include="EntityConfig\CompanyMap.cs" />
+    <Compile Include="EntityConfig\ComposantMap.cs" />
+    <Compile Include="EntityConfig\CompteurMap.cs" />
+    <Compile Include="EntityConfig\Consigne_maintenanceMap.cs" />
+    <Compile Include="EntityConfig\ConsMaintEquipementMap.cs" />
+    <Compile Include="EntityConfig\ConsPieceRechangeMap.cs" />
+    <Compile Include="EntityConfig\Dec_PanneMap.cs" />
+    <Compile Include="EntityConfig\DepartementMap.cs" />
+    <Compile Include="EntityConfig\DeviseMap.cs" />
+    <Compile Include="EntityConfig\DocumentMap.cs" />
+    <Compile Include="EntityConfig\EmplacementMap.cs" />
+    <Compile Include="EntityConfig\EquipementMap.cs" />
+    <Compile Include="EntityConfig\FonctionalityMap.cs" />
+    <Compile Include="EntityConfig\FournisseurMap.cs" />
+    <Compile Include="EntityConfig\GroupUserMap.cs" />
+    <Compile Include="EntityConfig\ListeconsMaintEquipementMap.cs" />
+    <Compile Include="EntityConfig\MagasinMap.cs" />
+    <Compile Include="EntityConfig\ModuleMap.cs" />
+    <Compile Include="EntityConfig\Ordre_de_travailMap.cs" />
+    <Compile Include="EntityConfig\OTEmployeMap.cs" />
+    <Compile Include="EntityConfig\OTfournisseursMap.cs" />
+    <Compile Include="EntityConfig\OTOutillageMap.cs" />
+    <Compile Include="EntityConfig\OTPieceRechangeMap.cs" />
+    <Compile Include="EntityConfig\OutillageMap.cs" />
+    <Compile Include="EntityConfig\PersonnelMap.cs" />
+    <Compile Include="EntityConfig\PhotoPanneMap.cs" />
+    <Compile Include="EntityConfig\PieceRechangeMap.cs" />
+    <Compile Include="EntityConfig\Poste_de_chargeMap.cs" />
+    <Compile Include="EntityConfig\RangementMap.cs" />
+    <Compile Include="EntityConfig\RightMap.cs" />
+    <Compile Include="EntityConfig\SiteMap.cs" />
+    <Compile Include="EntityConfig\StockInMap.cs" />
+    <Compile Include="EntityConfig\StockOutMap.cs" />
+    <Compile Include="EntityConfig\TestSchedulerMap.cs" />
+    <Compile Include="EntityConfig\UserMap.cs" />
+    <Compile Include="Migrations\201609260705398_init.cs" />
+    <Compile Include="Migrations\201609260705398_init.Designer.cs">
+      <DependentUpon>201609260705398_init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ArticleRepository.cs" />
+    <Compile Include="Repositories\AtelierRepository.cs" />
+    <Compile Include="Repositories\Carr_EquipRepository.cs" />
+    <Compile Include="Repositories\CategorieClientRepository.cs" />
+    <Compile Include="Repositories\CategorieEquipementRepository.cs" />
+    <Compile Include="Repositories\CategorieFournisseurRepository.cs" />
+    <Compile Include="Repositories\CategorieOutillageRepository.cs" />
+    <Compile Include="Repositories\CategoriePieceRechangeRepository.cs" />
+    <Compile Include="Repositories\CategoryRepository.cs" />
+    <Compile Include="Repositories\Catt_EquipRepository.cs" />
+    <Compile Include="Repositories\ClientRepository.cs" />
+    <Compile Include="Repositories\CompanyRepository.cs" />
+    <Compile Include="Repositories\ComposantRepository.cs" />
+    <Compile Include="Repositories\CompteurRepository.cs" />
+    <Compile Include="Repositories\Consigne_maintenanceRepository.cs" />
+    <Compile Include="Repositories\ConsMaintEquipementRepository.cs" />
+    <Compile Include="Repositories\ConsPieceRechangeRepository.cs" />
+    <Compile Include="Repositories\Dec_PanneRepository.cs" />
+    <Compile Include="Repositories\DepartementRepository.cs" />
+    <Compile Include="Repositories\DeviseRepository.cs" />
+    <Compile Include="Repositories\DocumentRepository.cs" />
+    <Compile Include="Repositories\EmplacementRepository.cs" />
+    <Compile Include="Repositories\EquipementRepository.cs" />
+    <Compile Include="Repositories\FonctionalityRepository.cs" />
+    <Compile Include="Repositories\FournisseurRepository.cs" />
+    <Compile Include="Repositories\GroupUserRepository.cs" />
+    <Compile Include="Repositories\ListeconsMaintEquipementRepository.cs" />
+    <Compile Include="Repositories\MagasinRepository.cs" />
+    <Compile Include="Repositories\ModuleRepository.cs" />
+    <Compile Include="Repositories\Ordre_de_travailRepository.cs" />
+    <Compile Include="Repositories\OTEmployeRepository.cs" />
+    <Compile Include="Repositories\OTfournisseursRepository.cs" />
+    <Compile Include="Repositories\OTOutillageRepository.cs" />
+    <Compile Include="Repositories\OTPieceRechangeRepository.cs" />
+    <Compile Include="Repositories\OutillageRepository.cs" />
+    <Compile Include="Repositories\PersonnelRepository.cs" />
+    <Compile Include="Repositories\PhotoPanneRepository.cs" />
+    <Compile Include="Repositories\PieceRechangeRepository.cs" />
+    <Compile Include="Repositories\Poste_de_chargeRepository.cs" />
+    <Compile Include="Repositories\RangementRepository.cs" />
+    <Compile Include="Repositories\RepositoryBase.cs" />
+    <Compile Include="Repositories\RightRepository.cs" />
+    <Compile Include="Repositories\SiteRepository.cs" />
+    <Compile Include="Repositories\StockInRepository.cs" />
+    <Compile Include="Repositories\StockOutRepository.cs" />
+    <Compile Include="Repositories\TestSchedulerRepository.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GMAO.Domain\GMAO.Domain.csproj">
+      <Project>{71a188fc-f798-41f7-8cb8-814398ce674d}</Project>
+      <Name>GMAO.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201609260705398_init.resx">
+      <DependentUpon>201609260705398_init.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

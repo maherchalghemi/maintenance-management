@@ -1,0 +1,262 @@
+﻿@model GMAO.App.Entities.PieceRechange_DTO
+
+
+
+@using (Html.BeginForm("Add", "PieceRechange", FormMethod.Post, new { id = "frmCreateUser" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div class="row">
+        <div class="col-xs-6">
+            <div class="form-group">
+                <label class="col-md-3 control-label">Code Piece</label>
+                <div class="col-xs-6">
+                    <div class="input-icon">
+                        <i class="fa fa-star"></i>
+                        @Html.EditorFor(model => model.CodePiece, new { htmlAttributes = new { @class = "form-control " } })
+                        @Html.ValidationMessageFor(model => model.CodePiece, "", new { @class = "text-danger" })
+
+
+                        <label id="lblmsg" class="help-block text-danger" />
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6">
+            <div class="form-group">
+                <label class="col-md-3 control-label">Designation</label>
+                <div class="col-xs-6">
+                    <div class="input-icon">
+                        <i class="fa fa-star"></i>
+                        @Html.EditorFor(model => model.Designation, new { htmlAttributes = new { @class = "form-control " } })
+                        @Html.ValidationMessageFor(model => model.Designation, "", new { @class = "text-danger" })
+
+
+                        <label id="lblmsg1" class="text-danger" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="portlet box blue">
+        <div class="portlet-title">
+            <div class="caption">
+                <i class="fa fa-edit"></i>Parametres
+            </div>
+            <div class="tools">
+                <a href="javascript:;" class="collapse">
+                </a>
+                
+            </div>
+        </div>      <!--/////////////////////-->
+        <div class="portlet-body form">
+
+
+            <div class="form-body">
+                <!--<h3 class="form-section">Parametres</h3>-->
+
+                <!--/row-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <div class="col-md-3">
+                                <label class="control-label">Categorie</label>
+                            </div>
+                            <div class="col-md-3">
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="control-label">Etat</label>
+                            </div>
+                            <div class="col-md-3">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <br /><br /><br />
+                    <div class="col-md-12">
+
+                        <div class="form-group">
+                            <div class="col-md-3">
+                                <label class="control-label">Code a Barre Interne</label>
+                            </div>
+                            <div class="col-md-3">
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="control-label">Code a Barre Du Fabricant</label>
+                            </div>
+                            <div class="col-md-3">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <br /><br /><br />
+                    <div class="col-md-12">
+
+                        <div class="form-group">
+                            <div class="col-md-3">
+                                <label class="control-label">Description</label>
+                            </div>
+                            <div class="col-md-9">
+                                <textarea class="form-control" rows="3"></textarea>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <br /><br /><br />
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Qt.Reel En Stok</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Unite</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Stok de Securite</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <!--/span-->
+
+                    </div>
+
+                    <div class="col-md-12">
+
+                        <div class="form-group">
+                            <div class="col-md-3">
+                                <label class="control-label">Prix Unitaire HT</label>
+                            </div>
+                            <div class="col-md-3">
+                                <input type="text" class="form-control">
+                            </div>
+
+                        </div>
+                    </div>
+                    <br /><br /><br />
+                    <div class="col-md-12">
+
+                        <div class="form-group">
+                            <div class="col-md-3">
+                                <label class="control-label">Fournisseur Principal</label>
+                            </div>
+                            <div class="col-md-3">
+                                <input type="text" class="form-control">
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <br /><br />
+
+
+                <!--/span-->
+            </div>
+        </div>
+        </div>
+
+
+
+        <div class="form-actions left">
+            <button type="button" class="btn default">Annuler</button>
+            <input type="button" value="Ajouter" class="btn blue" id="createButton" />
+
+
+        </div>
+
+
+
+        <!--/////////////////-->
+        }
+
+
+
+        @section scripts{
+            <script language="JavaScript" type="text/javascript">
+                //alert('Input can not be left blank');
+
+                $(document).ready(function () {
+                    $("#createButton").click(function (event) {
+
+                        // alert('Input can not be left blank');
+
+                        var form = $("#frmCreateUser");
+
+                        event.preventDefault();
+
+
+                        $.ajax(
+                               {
+
+
+                                   url: '@Url.Action("Add","PieceRechange")',
+                                   data: form.serialize(),
+                                   type: 'POST',
+
+
+                                   success: function (result) {
+                                       if (result == true) {
+                                           // alert('Input can not be left blank');
+                                           //alert(result);
+                                           //window.location.reload();
+                                           $('#lblmsg').html("");
+                                           $('#lblmsg1').html("");
+                                           document.getElementById("CodePiece").style.borderColor = "#00FF80";
+                                           document.getElementById("Designation").style.borderColor = "#00FF80";
+
+                                           toastr.success('Fournisseur ajouté', 'hhhhhhh');
+
+
+                                       }
+
+                                       else if (result == false) {
+
+                                           if (document.getElementById("CodePiece").value == "") {
+                                               $('#lblmsg').html("Four vide");
+                                               document.getElementById("CodePiece").focus();
+                                               document.getElementById("CodePiece").style.borderColor = "red";
+                                           }
+                                           if (document.getElementById("Designation").value == "") {
+                                               $('#lblmsg1').html("nom vide");
+                                               document.getElementById("Designation").focus();
+                                               document.getElementById("Designation").style.borderColor = "#F78181";
+
+                                           }
+
+                                           toastr.error('ERREUR');
+                                       }
+
+
+
+                                   },
+                                   error: function (result) {
+
+                                   }
+                               });
+                    });
+                });
+            </script>
+        }
+
+
+
+
+
+
+
+
+
+
+

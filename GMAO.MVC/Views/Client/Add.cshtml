@@ -1,0 +1,594 @@
+﻿@model GMAO.App.Entities.Client_DTO
+
+
+
+        @using (Html.BeginForm("Add", "Client", FormMethod.Post, new { id = "frmCreateUser" }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Code Client</label>
+                        <div class="col-xs-6">
+                            <div class="input-icon">
+                                <i class="fa fa-star"></i>
+                                @Html.EditorFor(model => model.CodeInterne, new { htmlAttributes = new { @class = "form-control " } })
+                                @Html.ValidationMessageFor(model => model.CodeInterne, "", new { @class = "text-danger" })
+
+
+                                <label id="lblmsg" class="help-block text-danger" />
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Nom</label>
+                        <div class="col-xs-6">
+                            <div class="input-icon">
+                                <i class="fa fa-star"></i>
+                                @Html.EditorFor(model => model.NomContact, new { htmlAttributes = new { @class = "form-control " } })
+                                @Html.ValidationMessageFor(model => model.NomContact, "", new { @class = "text-danger" })
+
+
+                                <label id="lblmsg1" class="text-danger" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    
+            <hr>
+            <!--/////////////////////-->
+            <div class="portlet-body form">
+
+
+                <div class="form-body">
+                    <h3 class="form-section">Informations generales</h3>
+                    <div class="col-md-12">
+
+                        <label class="col-md-1 control-label">Civilite</label>
+                        <div class="col-md-1">
+                            <select class="form-control">
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+
+                            </select>
+                        </div>
+
+                        <!--/span-->
+
+                        <label class="col-md-1 control-label">Etat</label>
+                        <div class="col-md-1">
+                            <select class="form-control">
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+
+                            </select>
+                        </div>
+
+                       
+
+                        <label class="col-md-1 control-label">EXO.TVA</label>
+                        <div class="col-md-1">
+                            <select class="form-control">
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+
+                            </select>
+                        </div>
+
+
+                        <label class="col-md-1 control-label">EXO.TVA</label>
+                        <div class="col-md-1">
+                            <select class="form-control">
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <!--/span-->
+                </div>
+                <br/>
+                <!--/row-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <div class="col-md-3">
+                                <label class="control-label">Categorie</label>
+                            </div>
+                            <div class="col-md-3">
+                                <select class="form-control">
+                                    <option value="">Male</option>
+                                    <option value="">Female</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control">
+                                @Html.Partial("_AddCategory")
+                            </div>
+                        </div>
+                        <!--/span
+                        <div class="col-md-6">
+                            <div class="form-group">
+
+                                <input type="text" class="form-control" >
+                            </div>
+                        </div>
+                        <!--/span-->
+                    </div>
+                    <!--/row-->
+
+                    <br/>
+                    <div class="col-md-12">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label">Delai Confirmation CDE</label>
+                                <textarea class="form-control" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <!--/span-->
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label">Domaine</label>
+                                <textarea class="form-control" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label">Observation</label>
+                                <textarea class="form-control" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <!--/span-->
+                    </div>
+                    <!--/row-->
+                    <!--??????-->
+
+                    <div class="col-md-12">
+
+                        <div class="col-md-6">
+
+                            <div class="portlet box blue">
+                                <div class="portlet-title">
+                                    <div class="caption">
+                                        <i class="fa fa-edit"></i>Adresse Usine
+                                    </div>
+                                    <div class="tools">
+                                        <a href="javascript:;" class="collapse">
+                                        </a>
+
+                                    </div>
+                                </div>
+
+                                <div class="portlet-body form">
+
+
+                                    <div class="form-body">
+                                        <!--<h3 class="form-section">Adresse Usine</h3>-->
+                                        <div class="row">
+                                            <div class="col-md-12 ">
+                                                <div class="form-group">
+                                                    <label>Adresse</label>
+                                                    <textarea class="form-control" rows="3"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12 ">
+                                                <div class="form-group">
+                                                    <label>Pays</label>
+                                                    <select class="form-control">
+                                                        <option value="">Male</option>
+                                                        <option value="">Female</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>Ville</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                            <!--/span-->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>CCP</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                            <!--/span-->
+                                        </div>
+                                        <!--/row-->
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>Tel</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                            <!--/span-->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>Fax</label>
+                                                    <select class="form-control"></select>
+                                                </div>
+                                            </div>
+                                            <!--/span-->
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label>Email</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                            <!--/span-->
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            </div>
+                                <!--!!!!!!!!!!!!!!!-->
+                                <div class="col-md-6">
+                                    <h3 class="form-section">Adresse Facturation</h3>
+                                    <div class="row">
+                                        <div class="col-md-12 ">
+                                            <div class="form-group">
+                                                <label>Adresse</label>
+                                                <textarea class="form-control" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12 ">
+                                            <div class="form-group">
+                                                <label>Pays</label>
+                                                <select class="form-control">
+                                                    <option value="">Male</option>
+                                                    <option value="">Female</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Ville</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <!--/span-->
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>CCP</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <!--/span-->
+                                    </div>
+                                    <!--/row-->
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Tel</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <!--/span-->
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Fax</label>
+                                                <select class="form-control"></select>
+                                            </div>
+                                        </div>
+                                        <!--/span-->
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Email</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <!--/span-->
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!--??????-->
+                        </div>
+                <div class="row">
+
+                    <div class="col-md-8">
+                        <h3 class="form-section">Compte et TAX</h3>
+
+
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Banque</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <!--/span-->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Siret</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <!--/span-->
+                        </div>
+                        <!--/row-->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Domiciliation</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <!--/span-->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Compte Bancaire</label>
+                                    <select class="form-control"></select>
+                                </div>
+                            </div>
+                            <!--/span-->
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>IBAN</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <!--/span-->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Code Douane</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <!--/span-->
+                        </div>
+                        <!--/row-->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>SWIFT</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <!--/span-->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Matricule Fiscale</label>
+                                    <select class="form-control"></select>
+                                </div>
+                            </div>
+                            <!--/span-->
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Escompte</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Nb.Facture</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Code TVA</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <!--/span-->
+
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Devise</label>
+                                    <select class="form-control">
+                                        <option value="">Male</option>
+                                        <option value="">Female</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Nb.BL</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Delai Liv</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <!--/span-->
+
+                        </div>
+                    </div>
+                    <!--!!!!!!!!!!!!!!!-->
+                    <div class="col-md-4">
+                        <h3 class="form-section">Paiment et Livraison</h3>
+                        <div class="row">
+                            <div class="col-md-12 ">
+                                <div class="form-group">
+                                    <label>Mode Paiment </label>
+                                    <select class="form-control">
+                                        <option value="">Male</option>
+                                        <option value="">Female</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 ">
+                                <div class="form-group">
+                                    <label>Condition Paiment </label>
+                                    <select class="form-control">
+                                        <option value="">Male</option>
+                                        <option value="">Female</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 ">
+                                <div class="form-group">
+                                    <label>Mode Livraison </label>
+                                    <select class="form-control">
+                                        <option value="">Male</option>
+                                        <option value="">Female</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 ">
+                                <div class="form-group">
+                                    <label>Condition Livraison </label>
+                                    <select class="form-control">
+                                        <option value="">Male</option>
+                                        <option value="">Female</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/row-->
+
+
+
+                    </div>
+
+                </div>
+                <div class="form-actions left">
+                    <button type="button" class="btn default">Annuler</button>
+                    <input type="button" value="Ajouter" class="btn blue" id="createButton" />
+                   
+                    
+                </div>
+
+
+
+                <!--/////////////////-->
+
+            </div>
+        }
+      
+   
+
+
+@section scripts{
+<script language="JavaScript" type="text/javascript">
+    //alert('Input can not be left blank');
+
+    $(document).ready(function () {
+        $("#createButton").click(function (event) {
+
+           // alert('Input can not be left blank');
+
+            var form = $("#frmCreateUser");
+
+            event.preventDefault();
+
+
+             $.ajax(
+                    {
+
+
+             url: '@Url.Action("Add","Client")',
+            data: form.serialize(),
+            type: 'POST',
+
+
+             success: function (result) {
+                  if (result == true) {
+                      // alert('Input can not be left blank');
+                      //alert(result);
+                      //window.location.reload();
+                      $('#lblmsg').html("");
+                      $('#lblmsg1').html("");
+                      document.getElementById("CodeInterne").style.borderColor = "#00FF80";
+                      document.getElementById("NomContact").style.borderColor = "#00FF80";
+
+                      toastr.success('Fournisseur ajouté', 'hhhhhhh');
+
+
+                  }
+
+                  else if (result == false) {
+
+                      if (document.getElementById("CodeInterne").value == "") {
+                     $('#lblmsg').html("Four vide");
+                 document.getElementById("CodeInterne").focus();
+                 document.getElementById("CodeInterne").style.borderColor = "red";
+             }
+                 if (document.getElementById("NomContact").value == "") {
+                     $('#lblmsg1').html("nom vide");
+                     document.getElementById("NomContact").focus();
+                     document.getElementById("NomContact").style.borderColor = "#F78181";
+
+                 }
+                 
+            toastr.error('ERREUR');
+                  }
+                 
+
+                 
+              },
+             error: function (result) {
+                /* if (document.getElementById("CodeInterne").value == "") {
+                     $('#lblmsg').html("Four vide");
+                     document.getElementById("CodeInterne").focus();
+                     document.getElementById("CodeInterne").style.borderColor = "red";
+                 }
+                 if (document.getElementById("NomContact").value == "") {
+                     $('#lblmsg1').html("nom vide");
+                     document.getElementById("NomContact").focus();
+                     document.getElementById("NomContact").style.borderColor = "#F78181";
+
+                 }
+                 
+                  toastr.error('ERREUR');*/
+              }
+          });
+        });
+    });
+</script>
+    }
+
+
+
+
+

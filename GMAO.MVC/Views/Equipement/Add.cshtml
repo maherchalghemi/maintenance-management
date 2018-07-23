@@ -1,0 +1,354 @@
+﻿@model GMAO.App.Entities.Equipement_DTO
+
+
+
+@using (Html.BeginForm("Add", "Equipement", FormMethod.Post, new { id = "frmCreateUser" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div class="row">
+        <div class="col-xs-6">
+            <div class="form-group">
+                <label class="col-md-3 control-label">Code Equipement</label>
+                <div class="col-xs-6">
+                    <div class="input-icon">
+                        <i class="fa fa-star"></i>
+                        @Html.EditorFor(model => model.CodeEquipement, new { htmlAttributes = new { @class = "form-control " } })
+                        @Html.ValidationMessageFor(model => model.CodeEquipement, "", new { @class = "text-danger" })
+
+
+                        <label id="lblmsg" class="help-block text-danger" />
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6">
+            <div class="form-group">
+                <label class="col-md-3 control-label">Designation</label>
+                <div class="col-xs-6">
+                    <div class="input-icon">
+                        <i class="fa fa-star"></i>
+                        @Html.EditorFor(model => model.Designation, new { htmlAttributes = new { @class = "form-control " } })
+                        @Html.ValidationMessageFor(model => model.Designation, "", new { @class = "text-danger" })
+
+
+                        <label id="lblmsg1" class="text-danger" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <hr>
+            <!--/////////////////////-->
+    <div class="portlet-body form">
+
+
+        <div class="form-body">
+            <h3 class="form-section">Identification</h3>
+
+            <!--/row-->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <div class="col-md-3">
+                            <label class="control-label">N° Serie</label>
+                        </div>
+                        <div class="col-md-3">
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-md-3">
+                            <label class="control-label">N° Modele</label>
+                        </div>
+                        <div class="col-md-3">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <!--/span
+
+                    <!--/span-->
+                </div>
+                <!--/row-->
+
+                <br /><br /><br /><br />
+
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <label class="control-label">Marque</label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="control-label">Observation</label>
+                    </div>
+                    <div class="col-md-3">
+                        <textarea class="form-control" rows="3"></textarea>
+                    </div>
+                </div>
+                <!--/span
+
+                <!--/span-->
+            </div>
+
+            <!--/row-->
+            <!--??????-->
+            <div class="col-md-12">
+
+                <div class="col-md-6">
+                    <h3 class="form-section">Parametres</h3>
+
+
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Poste</label>
+                                <select class="form-control">
+                                    <option value="">Male</option>
+                                    <option value="">Female</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!--/span-->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Categorie</label>
+                                <select class="form-control">
+                                    <option value="">Male</option>
+                                    <option value="">Female</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!--/span-->
+                    </div>
+                    <!--/row-->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Client</label>
+                                <select class="form-control">
+                                    <option value="">Male</option>
+                                    <option value="">Female</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!--/span-->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Etat</label>
+                                <select class="form-control">
+                                    <option value="">Male</option>
+                                    <option value="">Female</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!--/span-->
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Nb Equipe</label>
+                                <select class="form-control">
+                                    <option value="">Male</option>
+                                    <option value="">Female</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!--/span-->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Heure du travail</label>
+                                <select class="form-control">
+                                    <option value="">H.Début,H.Fin</option>
+                                    <option value="">H.Arrivée,H.Fin</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!--/span-->
+                    </div>
+                </div>
+                <!--!!!!!!!!!!!!!!!-->
+
+                <div class="col-md-6">
+                    <h3 class="form-section">Parametres d'achat</h3>
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Fournisseur</label>
+                            <select class="form-control">
+                                <option value="">Male</option>
+                                <option value="">Female</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Date Achat</label>
+                                <select class="form-control">
+                                    <option value="">Male</option>
+                                    <option value="">Female</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Garantie (ans)</label>
+                                <input type="text" class="form-control">
+
+                            </div>
+                        </div>
+                        <!--/span-->
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Date Fin Garantie</label>
+                                <select class="form-control">
+                                    <option value="">Male</option>
+                                    <option value="">Female</option>
+                                </select>
+
+                            </div>
+                        </div>
+                        <!--/span-->
+                    </div>
+                    <!--/row-->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Date Fabrication</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <!--/span-->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Prix D'achat (DT)</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <!--/span-->
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Mise en Service</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <!--/span-->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Tx.Amortissement</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <!--/span-->
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Facture d'achat</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <!--/span-->
+                </div>
+            </div>
+            <!--!!!!!!!!!!!!!!!-->
+        </div>
+        <!--??????-->
+    </div>
+    
+        <div class="form-actions left">
+            <button type="button" class="btn default">Annuler</button>
+            <input type="button" value="Ajouter" class="btn blue" id="createButton" />
+
+
+        </div>
+
+
+
+        <!--/////////////////-->
+
+   
+}
+
+
+
+
+@section scripts{
+    <script language="JavaScript" type="text/javascript">
+    //alert('Input can not be left blank');
+
+    $(document).ready(function () {
+        $("#createButton").click(function (event) {
+
+           // alert('Input can not be left blank');
+
+            var form = $("#frmCreateUser");
+
+            event.preventDefault();
+
+
+             $.ajax(
+                    {
+
+
+             url: '@Url.Action("Add","Equipement")',
+            data: form.serialize(),
+            type: 'POST',
+
+
+             success: function (result) {
+                  if (result == true) {
+                      // alert('Input can not be left blank');
+                      //alert(result);
+                      //window.location.reload();
+                      $('#lblmsg').html("");
+                      $('#lblmsg1').html("");
+                      document.getElementById("CodeEquipement").style.borderColor = "#00FF80";
+                      document.getElementById("Designation").style.borderColor = "#00FF80";
+
+                      toastr.success('Fournisseur ajouté', 'hhhhhhh');
+
+
+                  }
+
+                  else if (result == false) {
+
+                      if (document.getElementById("CodeEquipement").value == "") {
+                     $('#lblmsg').html("Four vide");
+                 document.getElementById("CodeEquipement").focus();
+                 document.getElementById("CodeEquipement").style.borderColor = "red";
+             }
+                 if (document.getElementById("Designation").value == "") {
+                     $('#lblmsg1').html("nom vide");
+                     document.getElementById("Designation").focus();
+                     document.getElementById("Designation").style.borderColor = "#F78181";
+
+                 }
+
+            toastr.error('ERREUR');
+                  }
+
+
+
+              },
+             error: function (result) {
+
+              }
+          });
+        });
+    });
+    </script>
+}
+
+
+
+
+

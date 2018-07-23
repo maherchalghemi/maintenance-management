@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CACA82DA-3823-48F5-9AB3-DD2337AEED66}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GMAO.App</RootNamespace>
+    <AssemblyName>GMAO.App</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.4.2.0\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\packages\Iesi.Collections.3.2.0.4000\lib\Net35\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\packages\NHibernate.3.3.3.4001\lib\Net35\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.DataAnnotations">
+      <HintPath>..\packages\NHibernate.DataAnnotations.3.3.3.4001\lib\net40\NHibernate.DataAnnotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoMapper\AutoMapper.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="Entities\Article_DTO.cs" />
+    <Compile Include="Entities\Atelier_DTO.cs" />
+    <Compile Include="Entities\Carr_Equip_DTO.cs" />
+    <Compile Include="Entities\CategorieClient_DTO.cs" />
+    <Compile Include="Entities\CategorieEquipement_DTO.cs" />
+    <Compile Include="Entities\CategorieFournisseur_DTO.cs" />
+    <Compile Include="Entities\CategorieOutillage_DTO.cs" />
+    <Compile Include="Entities\CategoriePieceRechange_DTO.cs" />
+    <Compile Include="Entities\Category_DTO.cs" />
+    <Compile Include="Entities\Catt_Equip_DTO.cs" />
+    <Compile Include="Entities\Client_DTO.cs" />
+    <Compile Include="Entities\Company_DTO.cs" />
+    <Compile Include="Entities\Composant_DTO.cs" />
+    <Compile Include="Entities\Compteur_DTO.cs" />
+    <Compile Include="Entities\Consigne_maintenance_DTO.cs" />
+    <Compile Include="Entities\ConsMaintEquipement_DTO.cs" />
+    <Compile Include="Entities\ConsPieceRechange_DTO.cs" />
+    <Compile Include="Entities\Dec_Panne_DTO.cs" />
+    <Compile Include="Entities\Departement_DTO.cs" />
+    <Compile Include="Entities\Devise_DTO.cs" />
+    <Compile Include="Entities\Document_DTO.cs" />
+    <Compile Include="Entities\Emplacement_DTO.cs" />
+    <Compile Include="Entities\Equipement_DTO.cs" />
+    <Compile Include="Entities\Fonctionality_DTO.cs" />
+    <Compile Include="Entities\Fournisseur_DTO.cs" />
+    <Compile Include="Entities\GroupUser_DTO.cs" />
+    <Compile Include="Entities\ListeconsMaintEquipement_DTO.cs" />
+    <Compile Include="Entities\Magasin_DTO.cs" />
+    <Compile Include="Entities\Module_DTO.cs" />
+    <Compile Include="Entities\Ordre_de_travail_DTO.cs" />
+    <Compile Include="Entities\OTEmploye_DTO.cs" />
+    <Compile Include="Entities\OTfournisseurs_DTO.cs" />
+    <Compile Include="Entities\OTOutillage_DTO.cs" />
+    <Compile Include="Entities\OTPieceRechange_DTO.cs" />
+    <Compile Include="Entities\Outillage_DTO.cs" />
+    <Compile Include="Entities\Personnel_DTO.cs" />
+    <Compile Include="Entities\PhotoPanne_DTO.cs" />
+    <Compile Include="Entities\PieceRechange_DTO.cs" />
+    <Compile Include="Entities\Poste_de_charge_DTO.cs" />
+    <Compile Include="Entities\Rangement_DTO.cs" />
+    <Compile Include="Entities\Right_DTO.cs" />
+    <Compile Include="Entities\Site_DTO.cs" />
+    <Compile Include="Entities\StockIn_DTO.cs" />
+    <Compile Include="Entities\StockOut_DTO.cs" />
+    <Compile Include="Entities\TestScheduler_DTO.cs" />
+    <Compile Include="Entities\User_DTO.cs" />
+    <Compile Include="Interface\IAppArticleService.cs" />
+    <Compile Include="Interface\IAppAtelierService.cs" />
+    <Compile Include="Interface\IAppCarr_EquipService.cs" />
+    <Compile Include="Interface\IAppCategorieClientService.cs" />
+    <Compile Include="Interface\IAppCategorieEquipementService.cs" />
+    <Compile Include="Interface\IAppCategorieFournisseurService.cs" />
+    <Compile Include="Interface\IAppCategorieOutillageService.cs" />
+    <Compile Include="Interface\IAppCategoriePieceRechangeService.cs" />
+    <Compile Include="Interface\IAppCategoryService.cs" />
+    <Compile Include="Interface\IAppCatt_EquipService.cs" />
+    <Compile Include="Interface\IAppClientService.cs" />
+    <Compile Include="Interface\IAppCompanyService.cs" />
+    <Compile Include="Interface\IAppComposantService.cs" />
+    <Compile Include="Interface\IAppCompteurService.cs" />
+    <Compile Include="Interface\IAppConsigne_maintenanceService.cs" />
+    <Compile Include="Interface\IAppConsMaintEquipementService.cs" />
+    <Compile Include="Interface\IAppConsPieceRechangeService.cs" />
+    <Compile Include="Interface\IAppDec_PanneService.cs" />
+    <Compile Include="Interface\IAppDepartementService.cs" />
+    <Compile Include="Interface\IAppDeviseService.cs" />
+    <Compile Include="Interface\IAppDocumentService.cs" />
+    <Compile Include="Interface\IAppEmplacementService.cs" />
+    <Compile Include="Interface\IAppEquipementService.cs" />
+    <Compile Include="Interface\IAppFonctionalityService.cs" />
+    <Compile Include="Interface\IAppFournisseurService.cs" />
+    <Compile Include="Interface\IAppGroupUserService.cs" />
+    <Compile Include="Interface\IAppListeconsMaintEquipementService.cs" />
+    <Compile Include="Interface\IAppMagasinService.cs" />
+    <Compile Include="Interface\IAppModuleService.cs" />
+    <Compile Include="Interface\IAppOrdre_de_travailService.cs" />
+    <Compile Include="Interface\IAppOTEmployeService.cs" />
+    <Compile Include="Interface\IAppOTfournisseursService.cs" />
+    <Compile Include="Interface\IAppOTOutillageService.cs" />
+    <Compile Include="Interface\IAppOTPieceRechangeService.cs" />
+    <Compile Include="Interface\IAppOutillageService.cs" />
+    <Compile Include="Interface\IAppPersonnelService.cs" />
+    <Compile Include="Interface\IAppPhotoPanneService.cs" />
+    <Compile Include="Interface\IAppPieceRechangeService.cs" />
+    <Compile Include="Interface\IAppPoste_de_chargeService.cs" />
+    <Compile Include="Interface\IAppRangementService.cs" />
+    <Compile Include="Interface\IAppRightService.cs" />
+    <Compile Include="Interface\IAppServiceBase.cs" />
+    <Compile Include="Interface\IAppSiteService.cs" />
+    <Compile Include="Interface\IAppStockInService.cs" />
+    <Compile Include="Interface\IAppStockOutService.cs" />
+    <Compile Include="Interface\IAppTestSchedulerService.cs" />
+    <Compile Include="Interface\IAppUserService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\AppServiceBase.cs" />
+    <Compile Include="Service\ArticleAppService.cs" />
+    <Compile Include="Service\AtelierAppService.cs" />
+    <Compile Include="Service\Carr_EquipAppService.cs" />
+    <Compile Include="Service\CategorieClientAppService.cs" />
+    <Compile Include="Service\CategorieEquipementAppService.cs" />
+    <Compile Include="Service\CategorieFournisseurAppService.cs" />
+    <Compile Include="Service\CategorieOutillageAppService.cs" />
+    <Compile Include="Service\CategoriePieceRechangeAppService.cs" />
+    <Compile Include="Service\CategoryAppService.cs" />
+    <Compile Include="Service\Catt_EquipAppService.cs" />
+    <Compile Include="Service\ClientAppService.cs" />
+    <Compile Include="Service\CompanyAppService.cs" />
+    <Compile Include="Service\ComposantAppService.cs" />
+    <Compile Include="Service\CompteurAppService.cs" />
+    <Compile Include="Service\Consigne_maintenanceAppService.cs" />
+    <Compile Include="Service\ConsMaintEquipementAppService.cs" />
+    <Compile Include="Service\ConsPieceRechangeAppService.cs" />
+    <Compile Include="Service\Dec_PanneAppService.cs" />
+    <Compile Include="Service\DepartementAppService.cs" />
+    <Compile Include="Service\DeviseAppService.cs" />
+    <Compile Include="Service\DocumentAppService.cs" />
+    <Compile Include="Service\EmplacementAppService.cs" />
+    <Compile Include="Service\EquipementAppService.cs" />
+    <Compile Include="Service\FonctionalityAppService.cs" />
+    <Compile Include="Service\FournisseurAppService.cs" />
+    <Compile Include="Service\GroupUserAppService.cs" />
+    <Compile Include="Service\ListeconsMaintEquipementAppService.cs" />
+    <Compile Include="Service\MagasinAppService.cs" />
+    <Compile Include="Service\ModuleAppService.cs" />
+    <Compile Include="Service\Ordre_de_travailAppService.cs" />
+    <Compile Include="Service\OTEmployeAppService.cs" />
+    <Compile Include="Service\OTfournisseursAppService.cs" />
+    <Compile Include="Service\OTOutillageAppService.cs" />
+    <Compile Include="Service\OTPieceRechangeAppService.cs" />
+    <Compile Include="Service\OutillageAppService.cs" />
+    <Compile Include="Service\PersonnelAppService.cs" />
+    <Compile Include="Service\PhotoPanneAppService.cs" />
+    <Compile Include="Service\PieceRechangeAppService.cs" />
+    <Compile Include="Service\Poste_de_chargeAppService.cs" />
+    <Compile Include="Service\RangementAppService.cs" />
+    <Compile Include="Service\RightAppService.cs" />
+    <Compile Include="Service\SiteAppService.cs" />
+    <Compile Include="Service\StockInAppService.cs" />
+    <Compile Include="Service\StockOutAppService.cs" />
+    <Compile Include="Service\TestSchedulerAppService.cs" />
+    <Compile Include="Service\UserAppService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GMAO.Domain\GMAO.Domain.csproj">
+      <Project>{71a188fc-f798-41f7-8cb8-814398ce674d}</Project>
+      <Name>GMAO.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Readme\NHibernate.DataAnnotations.Readme..txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

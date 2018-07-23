@@ -1,0 +1,5 @@
+C:\Users\maho\Documents\Visual Studio 2013\Projects\DDDGMAO\GMAO.Domain\bin\Release\GMAO.Domain.dll
+C:\Users\maho\Documents\Visual Studio 2013\Projects\DDDGMAO\GMAO.Domain\bin\Release\GMAO.Domain.pdb
+C:\Users\maho\Documents\Visual Studio 2013\Projects\DDDGMAO\GMAO.Domain\obj\Release\GMAO.Domain.dll
+C:\Users\maho\Documents\Visual Studio 2013\Projects\DDDGMAO\GMAO.Domain\obj\Release\GMAO.Domain.pdb
+C:\Users\maho\Documents\Visual Studio 2013\Projects\DDDGMAO\GMAO.Domain\obj\Release\GMAO.Domain.csprojResolveAssemblyReference.cache

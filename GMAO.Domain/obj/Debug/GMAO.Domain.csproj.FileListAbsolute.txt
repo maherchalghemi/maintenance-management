@@ -1,0 +1,4 @@
+c:\users\maho\documents\visual studio 2013\Projects\DDDGMAO\GMAO.Domain\bin\Debug\GMAO.Domain.dll
+c:\users\maho\documents\visual studio 2013\Projects\DDDGMAO\GMAO.Domain\bin\Debug\GMAO.Domain.pdb
+c:\users\maho\documents\visual studio 2013\Projects\DDDGMAO\GMAO.Domain\obj\Debug\GMAO.Domain.dll
+c:\users\maho\documents\visual studio 2013\Projects\DDDGMAO\GMAO.Domain\obj\Debug\GMAO.Domain.pdb

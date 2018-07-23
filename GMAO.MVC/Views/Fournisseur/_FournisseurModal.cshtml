@@ -1,0 +1,664 @@
+﻿<!-- Modal  -->
+<div class="modal fade in" id="modalAddUpdate" role="dialog">
+    <div class="modal-dialog modal-full">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Ajouter/Modifier</h4>
+            </div>
+
+            <div class="modal-body">
+                <form role="form">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="txtCode_Fournisseur">Code Fournisseur</label>
+                                <div class="col-xs-6">
+                                    <div class="input-icon">
+                                        <i class="fa fa-star"></i>
+
+                                        <input type="text" class="form-control" id="txtCode_Fournisseur">
+                                        <input type="hidden" id="hidID" value="0" />
+
+                                        <label id="lblmsg" class="help-block text-danger" />
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="txtNom">Nom</label>
+                                <div class="col-xs-6">
+                                    <div class="input-icon">
+                                        <i class="fa fa-star"></i>
+
+                                        <input type="text" class="form-control" id="txtNom">
+                                        <label id="lblmsg1" class="text-danger" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <!--/////////////////////-->
+
+
+                    <div class="portlet box green" id="my_portlet">
+                        <div class="portlet-title">
+                            <div class="caption">
+                                <i class="fa fa-edit"></i>Informations générales
+                            </div>
+                            <div class="tools">
+                                <a href="javascript:;" class="collapse">
+                                </a>
+
+                            </div>
+                        </div>
+                        <div class="portlet-body form">
+
+
+
+                            <!-- <h3 class="form-section">Informations générales</h3>-->
+                            <div class="col-md-12">
+                                <br/><br />
+                                <label class="col-md-3 control-label">Civilité</label>
+                                <div class="col-md-3">
+                                    <select class="form-control">
+                                        <option value="Mr.">Mr.</option>
+                                        <option value="Mme">Mme</option>
+                                        <option value="Melle">Melle</option>
+                                        <option value="Ste">Ste.</option>
+
+                                    </select>
+                                </div>
+
+                                <!--/span-->
+                                <div class="col-md-3">
+                                   
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" id="ckEtat">Active</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" id="ckEXO">EXO.TVA</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <label class="col-md-3 control-label">Lo./Imp</label>
+                                <div class="col-md-3">
+                                    <select class="form-control">
+                                        <option value="Local">Local</option>
+                                        <option value="Import">Import</option>
+
+                                    </select>
+                                </div>
+
+                                <!--/span-->
+                                <!--/row-->
+
+
+
+                                <div class="col-md-3">
+                                    <label class="control-label">Catégorie</label>
+                                </div>
+                                <div class="col-md-3">
+                                    <select class="form-control" id="selCat">
+                                        <option> --</option>
+
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <!--/row-->
+
+
+                            <div class="col-md-12">
+                                <div class="col-md-4">
+                                    <br /><br />
+                                    <div class="form-group">
+                                        <label class="control-label" for="txtDélai_confirmation_CDE">Délai Confirmation CDE</label>
+                                        <textarea class="form-control" rows="3" id="txtDélai_confirmation_CDE"></textarea>
+                                    </div>
+                                </div>
+                                <!--/span-->
+                                <div class="col-md-4">
+                                    <br /><br />
+                                    <div class="form-group">
+                                        <label class="control-label" for="txtDomaine">Domaine</label>
+                                        <textarea class="form-control" rows="3" id="txtDomaine"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <br /><br />
+                                        <label class="control-label" for="txtobservation">Observation</label>
+                                        <textarea class="form-control" rows="3" id="txtobservation"></textarea>
+                                    </div>
+                                </div>
+                                <!--/span-->
+                            </div>
+
+                            <!--/span-->
+                        </div>
+                        
+                    </div>
+                        <!--/row-->
+                        <!--??????-->
+                    
+                    <div class="col-md-12">
+
+                        <div class="col-md-4">
+                            <br /> <br />
+                            <!-- <h3 class="form-section">Adresse Usine</h3>-->
+                            <div class="portlet box blue-hoki">
+                                <div class="portlet-title">
+                                    <div class="caption">
+                                        <i class="fa fa-edit"></i>Adresse Usine
+                                    </div>
+                                    <div class="tools">
+                                        <a href="javascript:;" class="collapse">
+                                        </a>
+
+                                    </div>
+                                </div>
+
+                                <div class="portlet-body form">
+
+
+                                    <div class="form-body">
+                                        <div class="row">
+                                            <div class="col-md-12 ">
+                                                <div class="form-group">
+                                                    <label for="txtadresse_usine">Adresse</label>
+                                                    <textarea class="form-control" rows="3" id="txtadresse_usine"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12 ">
+                                                <div class="form-group">
+                                                    <label for="txtpays_usine">Pays</label>
+                                                    <input type="text" class="form-control" id="txtpays_usine">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="txtville_usine">Ville</label>
+                                                    <input type="text" class="form-control" id="txtville_usine">
+                                                </div>
+                                            </div>
+                                            <!--/span-->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="txtccp_usine">CCP</label>
+                                                    <input type="text" class="form-control" id="txtccp_usine">
+                                                </div>
+                                            </div>
+                                            <!--/span-->
+                                        </div>
+                                        <!--/row-->
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="txttel_usine">Tel</label>
+                                                    <input type="text" class="form-control" id="txttel_usine">
+                                                </div>
+                                            </div>
+                                            <!--/span-->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="txtfax_usine">Fax</label>
+                                                    <input type="text" class="form-control" id="txtfax_usine">
+                                                </div>
+                                            </div>
+                                            <!--/span-->
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="txtemail_usine">Email</label>
+                                                    <input type="email" class="form-control" id="txtemail_usine">
+                                                </div>
+                                            </div>
+                                            <!--/span-->
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--!!!!!!!!!!!!!!!-->
+                        <div class="col-md-4">
+                            <br /> <br />
+                            <div class="portlet box red">
+                                <div class="portlet-title">
+                                    <div class="caption">
+                                        <i class="fa fa-edit"></i>Adresse Facturation
+                                    </div>
+                                    <div class="tools">
+                                        <a href="javascript:;" class="collapse">
+                                        </a>
+
+                                    </div>
+                                </div>
+
+                                <div class="portlet-body form">
+
+
+                                    <div class="form-body">
+
+                                        <!-- <h3 class="form-section">Adresse Facturation</h3>-->
+                                        <div class="row">
+                                            <div class="col-md-12 ">
+                                                <div class="form-group">
+                                                    <label for="txtadresse_facturation">Adresse</label>
+                                                    <textarea class="form-control" rows="3" id="txtadresse_facturation"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12 ">
+                                                <div class="form-group">
+                                                    <label for="txtPays_F">Pays</label>
+                                                    <input type="text" class="form-control" id="txtPays_F">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="txtVille_F">Ville</label>
+                                                    <input type="text" class="form-control" id="txtVille_F">
+                                                </div>
+                                            </div>
+                                            <!--/span-->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="txtccp_F">CCP</label>
+                                                    <input type="text" class="form-control" id="txtccp_F">
+                                                </div>
+                                            </div>
+                                            <!--/span-->
+                                        </div>
+                                        <!--/row-->
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="txttéL_F">Tel</label>
+                                                    <input type="text" class="form-control" id="txttéL_F">
+                                                </div>
+                                            </div>
+                                            <!--/span-->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="txtFAX_F">Fax</label>
+                                                    <input type="text" class="form-control" id="txtFAX_F">
+                                                </div>
+                                            </div>
+                                            <!--/span-->
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="txtEMAIL_F">Email</label>
+                                                    <input type="email" class="form-control" id="txtEMAIL_F">
+                                                </div>
+                                            </div>
+                                            <!--/span-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--!!!!!!!!-->
+                        <div class="col-md-4">
+                            <br /> <br />
+                            <div class="portlet box purple">
+                                <div class="portlet-title">
+                                    <div class="caption">
+                                        <i class="fa fa-edit"></i>Adresse Livraison
+                                    </div>
+                                    <div class="tools">
+                                        <a href="javascript:;" class="collapse">
+                                        </a>
+
+                                    </div>
+                                </div>
+
+                                <div class="portlet-body form">
+
+
+                                    <div class="form-body">
+                                        <!-- <h3 class="form-section">Adresse Livraison</h3>-->
+                                        <div class="row">
+                                            <div class="col-md-12 ">
+                                                <div class="form-group">
+                                                    <label for="txtadresse_livraison">Adresse</label>
+                                                    <textarea class="form-control" rows="3" id="txtadresse_livraison"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12 ">
+                                                <div class="form-group">
+                                                    <label for="txtPays_L">Pays</label>
+                                                    <input type="text" class="form-control" id="txtPays_L">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="txtVille_L">Ville</label>
+                                                    <input type="text" class="form-control" id="txtVille_L">
+                                                </div>
+                                            </div>
+                                            <!--/span-->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="txtccP_L">CCP</label>
+                                                    <input type="text" class="form-control" id="txtccP_L">
+                                                </div>
+                                            </div>
+                                            <!--/span-->
+                                        </div>
+                                        <!--/row-->
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="txttéL_L">Tel</label>
+                                                    <input type="text" class="form-control" id="txttéL_L">
+                                                </div>
+                                            </div>
+                                            <!--/span-->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="txtFAX_l">Fax</label>
+                                                    <input type="text" class="form-control" id="txtFAX_l">
+                                                </div>
+                                            </div>
+                                            <!--/span-->
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="txtEMAIL_L">Email</label>
+                                                    <input type="email" class="form-control" id="txtEMAIL_L">
+                                                </div>
+                                            </div>
+                                            <!--/span-->
+
+                                        </div>
+                                    </div>
+                                    <!--!!!!!!!-->
+                                </div>
+                            </div>
+                        </div>
+                        <!--??????-->
+                    </div>
+                    <div class="row">
+
+                        <div class="col-md-8">
+
+                            <div class="portlet box yellow">
+                                <div class="portlet-title">
+                                    <div class="caption">
+                                        <i class="fa fa-edit"></i>Compte et TAX
+                                    </div>
+                                    <div class="tools">
+                                        <a href="javascript:;" class="collapse">
+                                        </a>
+
+                                    </div>
+                                </div>
+
+                                <div class="portlet-body form">
+
+
+                                    <div class="form-body">
+
+                                        <!--<h3 class="form-section">Compte et TAX</h3>-->
+
+
+
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="txtBanque">Banque</label>
+                                                    <input type="text" class="form-control" id="txtBanque">
+                                                </div>
+                                            </div>
+                                            <!--/span-->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>Siret</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                            <!--/span-->
+                                        </div>
+                                        <!--/row-->
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="txtDomiciliation_Bancaire">Domiciliation</label>
+                                                    <input type="text" class="form-control" id="txtDomiciliation_Bancaire">
+                                                </div>
+                                            </div>
+                                            <!--/span-->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="txtCompte_Courant_Bancaire">Compte Bancaire</label>
+                                                    <input type="text" class="form-control" id="txtCompte_Courant_Bancaire">
+                                                </div>
+                                            </div>
+                                            <!--/span-->
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="txtIBAN">IBAN</label>
+                                                    <input type="text" class="form-control" id="txtIBAN">
+                                                </div>
+                                            </div>
+                                            <!--/span-->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="txtcode_douane">Code Douane</label>
+                                                    <input type="text" class="form-control" id="txtcode_douane">
+                                                </div>
+                                            </div>
+                                            <!--/span-->
+                                        </div>
+                                        <!--/row-->
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="txtSWIFT">SWIFT</label>
+                                                    <input type="text" class="form-control" id="txtSWIFT">
+                                                </div>
+                                            </div>
+                                            <!--/span-->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="txtmatricule_fiscale">Matricule Fiscale</label>
+                                                    <input type="number" class="form-control" id="txtmatricule_fiscale">
+                                                </div>
+                                            </div>
+                                            <!--/span-->
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="txtescompte">Escompte</label>
+                                                    <input type="text" class="form-control" id="txtescompte">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="txtnb_facture">Nb.Facture</label>
+                                                    <input type="text" class="form-control" id="txtnb_facture">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="txtcode_tva">Code TVA</label>
+                                                    <input type="text" class="form-control" id="txtCode_tva">
+                                                </div>
+                                            </div>
+                                            <!--/span-->
+
+                                        </div>
+
+
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label>Devise</label>
+                                                    <select class="form-control" id="selDev">
+                                                        <option> --</option>
+
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="txtnb_bl">Nb.BL</label>
+                                                    <input type="number" class="form-control" id="txtnb_bl">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label>Delai Liv</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                            <!--/span-->
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <!--!!!!!!!!!!!!!!!-->
+                        <div class="col-md-4">
+                            <div class="portlet box blue">
+                                <div class="portlet-title">
+                                    <div class="caption">
+                                        <i class="fa fa-edit"></i>Paiment et Livraison
+                                    </div>
+                                    <div class="tools">
+                                        <a href="javascript:;" class="collapse">
+                                        </a>
+
+                                    </div>
+                                </div>
+
+                                <div class="portlet-body form">
+
+
+                                    <div class="form-body">
+                                        <!-- <h3 class="form-section">Paiment et Livraison</h3>-->
+                                        <div class="row">
+                                            <div class="col-md-12 ">
+                                                <div class="form-group">
+                                                    <label>Mode Paiment </label>
+                                                    <select class="form-control">
+                                                        <option value="">Male</option>
+                                                        <option value="">Female</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12 ">
+                                                <div class="form-group">
+                                                    <label>Condition Paiment </label>
+                                                    <select class="form-control">
+                                                        <option value="">Male</option>
+                                                        <option value="">Female</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12 ">
+                                                <div class="form-group">
+                                                    <label>Mode Livraison </label>
+                                                    <select class="form-control">
+                                                        <option value="">Male</option>
+                                                        <option value="">Female</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12 ">
+                                                <div class="form-group">
+                                                    <label>Condition Livraison </label>
+                                                    <select class="form-control">
+                                                        <option value="">Male</option>
+                                                        <option value="">Female</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/row-->
+
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+</form>
+            </div>
+
+
+
+
+
+
+            <div class="modal-footer">
+
+               
+
+                <button type="submit" class="btn btn-primary" id="btnSave">Valider</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+
+            </div>
+
+
+            
+        </div>
+    </div>
+</div>
+
+
+
